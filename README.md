@@ -36,15 +36,19 @@
 
 ![画像5](/readme-img/005.png)
 
-### 2. [GitHub](https://github.com/natsumo/SwiftLoginApp.git)からサンプルプロジェクトのダウンロード
-
-* この画面([GitHub](https://github.com/natsumo/SwiftLoginApp.git))の![画像10](/readme-img/010.png)ボタンをクリックし、さらに![画像11](/readme-img/011.PNG)ボタンをクリックしてサンプルプロジェクトをMacにダウンロードします
+#### 2. GitHubからサンプルプロジェクトのダウンロード
+* 下記リンクをクリックしてプロジェクトをダウンロードをMacにダウンロードします
+ * __[SwiftLoginApp](https://github.com/natsumo/SwiftLoginApp/archive/master.zip)__
 
 ### 3. Xcodeでアプリを起動
+* ダウンロードしたフォルダを開き、「SwiftLoginApp.xcworkspace」をダブルクリックしてXcode開きます(白い方です)
 
-* ダウンロードしたフォルダを開き、![画像09](/readme-img/009.png)をダブルクリックしてXcode開きます　![画像08](/readme-img/008.png)
+![画像09](/readme-img/009.png)
 
 ![画像6](/readme-img/006.png)
+
+* 「SwiftLoginApp.xcodeproj」（青い方）ではないので注意してください！
+![画像08](/readme-img/008.png)
 
 ### 4. APIキーの設定
 
@@ -107,10 +111,10 @@
 NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
     if error != nil {
         // ログイン失敗時の処理
-        
+
     }else{
         // ログイン成功時の処理
-        
+
     }
 })
 ```
@@ -122,10 +126,10 @@ NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: se
 user.signUpInBackgroundWithBlock{(error: NSError!) in
     if error != nil {
         // 新規登録失敗時の処理
-        
+
     }else{
         // 新規登録成功時の処理
-        
+
     }
 }
 ```

@@ -24,13 +24,13 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Passwordをセキュリティ入力に設定
-        self.passwordTextField.secureTextEntry = true
-        self.passwordTextField_second.secureTextEntry = true
+        self.passwordTextField.isSecureTextEntry = true
+        self.passwordTextField_second.isSecureTextEntry = true
         
     }
     
     // SignUpボタン押下時の距離
-    @IBAction func signUpBtn(sender: UIButton) {
+    @IBAction func signUpBtn(_ sender: UIButton) {
         // キーボードを閉じる
         closeKeyboad()
         
@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController {
         user.password = self.passwordTextField.text
         
         //会員の登録を行う
-        user.signUpInBackgroundWithBlock{(error: NSError!) in
+        user.signUpInBackground({(error: NSError!) in
             // TextFieldを空に
             self.cleanTextField()
             
@@ -70,17 +70,16 @@ class SignUpViewController: UIViewController {
                 
             } else {
                 // 新規登録成功時の処理
-                self.performSegueWithIdentifier("signUp", sender: self)
+                self.performSegue(withIdentifier: "signUp", sender: self)
                 print("ログインに成功しました:\(user.objectId)")
                 
             }
-            
-        }
+        } as! NCMBErrorResultBlock)
         
     }
     
     // 背景タップするとキーボードを隠す
-    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+    @IBAction func tapScreen(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
         
     }

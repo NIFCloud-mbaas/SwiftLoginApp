@@ -21,12 +21,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Passwordをセキュリティ入力に設定する
-        self.passwordTextField.isSecureTextEntry = true
+        self.passwordTextField.secureTextEntry = true
         
     }
     
     // Loginボタン押下時の処理
-    @IBAction func loginBtn(_ sender: UIButton) {
+    @IBAction func loginBtn(sender: UIButton) {
         // キーボードを閉じる
         closeKeyboad()
         
@@ -41,7 +41,7 @@ class LoginViewController: UIViewController {
         }
         
         // ユーザー名とパスワードでログイン
-        NCMBUser.logInWithUsername(inBackground: self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
+        NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
             // TextFieldを空に
             self.cleanTextField()
             
@@ -52,17 +52,17 @@ class LoginViewController: UIViewController {
                 
             }else{
                 // ログイン成功時の処理
-                self.performSegue(withIdentifier: "login", sender: self)
-                print("ログインに成功しました:\(String(describing: user?.objectId))")
+                self.performSegueWithIdentifier("login", sender: self)
+                print("ログインに成功しました:\(user?.objectId)")
                 
             }
             
-        } as! NCMBUserResultBlock)
+        })
         
     }
     
     // SignUp画面へ遷移
-    @IBAction func toSignUp(_ sender: UIButton) {
+    @IBAction func toSignUp(sender: UIButton) {
         // TextFieldを空にする
         cleanTextField()
         // errorLabelを空に
@@ -70,12 +70,12 @@ class LoginViewController: UIViewController {
         // キーボードを閉じる
         closeKeyboad()
         
-        self.performSegue(withIdentifier: "loginToSignUp", sender: self)
+        self.performSegueWithIdentifier("loginToSignUp", sender: self)
         
     }
     
     // 背景タップするとキーボードを隠す
-    @IBAction func tapScreen(_ sender: UITapGestureRecognizer) {
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
         
     }

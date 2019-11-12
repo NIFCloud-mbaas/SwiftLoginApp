@@ -24,13 +24,13 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Passwordをセキュリティ入力に設定
-        self.passwordTextField.secureTextEntry = true
-        self.passwordTextField_second.secureTextEntry = true
+        self.passwordTextField.isSecureTextEntry = true
+        self.passwordTextField_second.isSecureTextEntry = true
         
     }
     
     // SignUpボタン押下時の距離
-    @IBAction func signUpBtn(sender: UIButton) {
+    @IBAction func signUpBtn(_ sender: Any) {
         // キーボードを閉じる
         closeKeyboad()
         
@@ -59,28 +59,31 @@ class SignUpViewController: UIViewController {
         user.password = self.passwordTextField.text
         
         //会員の登録を行う
-        user.signUpInBackgroundWithBlock{(error: NSError!) in
+        user.signUpInBackground(callback: { result in
             // TextFieldを空に
-            self.cleanTextField()
-            
-            if error != nil {
-                // 新規登録失敗時の処理
-                self.errorLabel.text = "ログインに失敗しました:\(error.code)"
-                print("ログインに失敗しました:\(error.code)")
-                
-            } else {
-                // 新規登録成功時の処理
-                self.performSegueWithIdentifier("signUp", sender: self)
-                print("ログインに成功しました:\(user.objectId)")
-                
+            DispatchQueue.main.sync {
+                self.cleanTextField()
             }
             
-        }
+            switch result {
+                case .success:
+                    // 新規登録成功時の処理
+                    DispatchQueue.main.sync {
+                        self.performSegue(withIdentifier: "signUp", sender: self)
+                    }
+                    let user:NCMBUser = NCMBUser.currentUser!
+                    print("ログインに成功しました:\(String(describing: user.objectId))")
+                case let .failure(error):
+                    // 新規登録失敗時の処理
+                    self.errorLabel.text = "ログインに失敗しました:\(error)"
+                    print("ログインに失敗しました:\(error)")
+            }
+        })
         
     }
     
     // 背景タップするとキーボードを隠す
-    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+    @IBAction func tapScreen(_ sender: Any) {
         self.view.endEditing(true)
         
     }

@@ -21,12 +21,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Passwordをセキュリティ入力に設定する
-        self.passwordTextField.secureTextEntry = true
+        self.passwordTextField.isSecureTextEntry = true
         
     }
     
     // Loginボタン押下時の処理
-    @IBAction func loginBtn(sender: UIButton) {
+    @IBAction func loginBtn(_ sender: UIButton) {
         // キーボードを閉じる
         closeKeyboad()
         
@@ -41,28 +41,33 @@ class LoginViewController: UIViewController {
         }
         
         // ユーザー名とパスワードでログイン
-        NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
+        NCMBUser.logInInBackground(userName: self.userNameTextField.text!, password: self.passwordTextField.text!, callback:{ result in
             // TextFieldを空に
-            self.cleanTextField()
-            
-            if error != nil {
-                // ログイン失敗時の処理
-                self.errorLabel.text = "ログインに失敗しました:\(error.code)"
-                print("ログインに失敗しました:\(error.code)")
-                
-            }else{
-                // ログイン成功時の処理
-                self.performSegueWithIdentifier("login", sender: self)
-                print("ログインに成功しました:\(user?.objectId)")
-                
+            DispatchQueue.main.sync {
+                self.cleanTextField()
             }
             
+            switch result {
+                case .success:
+                    // ログイン成功時の処理
+                    DispatchQueue.main.sync {
+                        self.performSegue(withIdentifier: "login", sender: self)
+                    }
+                    let user:NCMBUser = NCMBUser.currentUser!
+                    print("ログインに成功しました:\(String(describing: user.objectId))")
+                case let .failure(error):
+                    // 保存に失敗した場合の処理
+                    DispatchQueue.main.sync {
+                        self.errorLabel.text = "ログインに失敗しました:\(error)"
+                    }
+                    print("ログインに失敗しました:\(error)")
+            }
         })
         
     }
     
     // SignUp画面へ遷移
-    @IBAction func toSignUp(sender: UIButton) {
+    @IBAction func toSignUp(_ sender: Any) {
         // TextFieldを空にする
         cleanTextField()
         // errorLabelを空に
@@ -70,12 +75,12 @@ class LoginViewController: UIViewController {
         // キーボードを閉じる
         closeKeyboad()
         
-        self.performSegueWithIdentifier("loginToSignUp", sender: self)
+        self.performSegue(withIdentifier: "loginToSignUp", sender: self)
         
     }
     
     // 背景タップするとキーボードを隠す
-    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+    @IBAction func tapScreen(_sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
         
     }

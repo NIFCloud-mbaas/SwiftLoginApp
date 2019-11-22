@@ -13,9 +13,9 @@
 ![画像2](/readme-img/002.png)
 
 ## 動作環境
-* Mac OS X 10.10(Yosemite)
-* Xcode ver. 7.2.1
-* Simulator ver. 9.2
+* Mac OS Mojave 10.14.4
+* Xcode ver.11.0 (11A420a)
+* Simulator iphone 11 pro max
 
 ※上記内容で動作確認をしています。
 
@@ -71,7 +71,7 @@
  * その場合は[【Swift】SDKの読み込みにuse framework!が使えない場合の対処方法](http://goo.gl/Z1D0K3)をご覧いただき、別の読み込み方法をお試しください
 
 * シミュレーターが起動したら、Login画面が表示されます
-* 初回は__`SignUp`__ ボタンをクリックして、会員登録を行います
+* 初回は`SignUp`ボタンをクリックして、会員登録を行います
 
 ![画像14](/readme-img/014.png)
 

@@ -17,10 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let applicationkey = "YOUR_NCMB_APPLICATION_KEY"
     let clientkey      = "YOUR_NCMB_CLIENT_KEY"
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Override point for customization after application launch.
         //********** SDKの初期化 **********
-        NCMB.setApplicationKey(applicationkey, clientKey: clientkey)
+        NCMB.initialize(applicationKey: applicationkey, clientKey: clientkey)
+       
         return true
     }
 

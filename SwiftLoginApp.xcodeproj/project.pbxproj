@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		489FDCB9262010F400F5296D /* LoginUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489FDCB8262010F400F5296D /* LoginUITest.swift */; };
+		489FDCBD2620111F00F5296D /* SignUpUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489FDCBC2620111F00F5296D /* SignUpUITest.swift */; };
+		48C95C972623E30500AAEBFE /* LogoutUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C95C962623E30500AAEBFE /* LogoutUITest.swift */; };
 		AE3410ACA347543B9519C50A /* Pods_SwiftLoginApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99017194D3D0B37FF65E878D /* Pods_SwiftLoginApp.framework */; };
 		BD49DCC21CC9C9340034F3CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49DCC11CC9C9340034F3CB /* AppDelegate.swift */; };
 		BD49DCC41CC9C9340034F3CB /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49DCC31CC9C9340034F3CB /* LogoutViewController.swift */; };
@@ -17,8 +20,23 @@
 		BD49DCD61CC9D2E40034F3CB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD49DCD51CC9D2E40034F3CB /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		489FDCB12620109B00F5296D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD49DCB61CC9C9340034F3CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD49DCBD1CC9C9340034F3CB;
+			remoteInfo = SwiftLoginApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		32EB30E8AF192C1860045412 /* Pods-SwiftLoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLoginApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLoginApp/Pods-SwiftLoginApp.debug.xcconfig"; sourceTree = "<group>"; };
+		489FDCAC2620109B00F5296D /* SwiftLoginAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLoginAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		489FDCB02620109B00F5296D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		489FDCB8262010F400F5296D /* LoginUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITest.swift; sourceTree = "<group>"; };
+		489FDCBC2620111F00F5296D /* SignUpUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITest.swift; sourceTree = "<group>"; };
+		48C95C962623E30500AAEBFE /* LogoutUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUITest.swift; sourceTree = "<group>"; };
 		99017194D3D0B37FF65E878D /* Pods_SwiftLoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD49DCBE1CC9C9340034F3CB /* SwiftLoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD49DCC11CC9C9340034F3CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -33,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		489FDCA92620109B00F5296D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD49DCBB1CC9C9340034F3CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,6 +69,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		489FDCAD2620109B00F5296D /* SwiftLoginAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				489FDCB02620109B00F5296D /* Info.plist */,
+				489FDCB8262010F400F5296D /* LoginUITest.swift */,
+				489FDCBC2620111F00F5296D /* SignUpUITest.swift */,
+				48C95C962623E30500AAEBFE /* LogoutUITest.swift */,
+			);
+			path = SwiftLoginAppUITests;
+			sourceTree = "<group>";
+		};
 		4C9150AD9F59430B7C588C1B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BD49DCC01CC9C9340034F3CB /* SwiftLoginApp */,
+				489FDCAD2620109B00F5296D /* SwiftLoginAppUITests */,
 				BD49DCBF1CC9C9340034F3CB /* Products */,
 				4C9150AD9F59430B7C588C1B /* Pods */,
 				4CBC1514526BCB6C52D734E0 /* Frameworks */,
@@ -75,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BD49DCBE1CC9C9340034F3CB /* SwiftLoginApp.app */,
+				489FDCAC2620109B00F5296D /* SwiftLoginAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +135,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		489FDCAB2620109B00F5296D /* SwiftLoginAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 489FDCB52620109B00F5296D /* Build configuration list for PBXNativeTarget "SwiftLoginAppUITests" */;
+			buildPhases = (
+				489FDCA82620109B00F5296D /* Sources */,
+				489FDCA92620109B00F5296D /* Frameworks */,
+				489FDCAA2620109B00F5296D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				489FDCB22620109B00F5296D /* PBXTargetDependency */,
+			);
+			name = SwiftLoginAppUITests;
+			productName = SwiftLoginAppUITests;
+			productReference = 489FDCAC2620109B00F5296D /* SwiftLoginAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		BD49DCBD1CC9C9340034F3CB /* SwiftLoginApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD49DCD01CC9C9340034F3CB /* Build configuration list for PBXNativeTarget "SwiftLoginApp" */;
@@ -124,10 +180,15 @@
 		BD49DCB61CC9C9340034F3CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "NIFTY Corporation";
 				TargetAttributes = {
+					489FDCAB2620109B00F5296D = {
+						CreatedOnToolsVersion = 12.4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BD49DCBD1CC9C9340034F3CB;
+					};
 					BD49DCBD1CC9C9340034F3CB = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -138,6 +199,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -147,11 +209,19 @@
 			projectRoot = "";
 			targets = (
 				BD49DCBD1CC9C9340034F3CB /* SwiftLoginApp */,
+				489FDCAB2620109B00F5296D /* SwiftLoginAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		489FDCAA2620109B00F5296D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD49DCBC1CC9C9340034F3CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +308,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		489FDCA82620109B00F5296D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				489FDCBD2620111F00F5296D /* SignUpUITest.swift in Sources */,
+				48C95C972623E30500AAEBFE /* LogoutUITest.swift in Sources */,
+				489FDCB9262010F400F5296D /* LoginUITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD49DCBA1CC9C9340034F3CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -250,6 +330,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		489FDCB22620109B00F5296D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD49DCBD1CC9C9340034F3CB /* SwiftLoginApp */;
+			targetProxy = 489FDCB12620109B00F5296D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BD49DCC51CC9C9340034F3CB /* Main.storyboard */ = {
@@ -271,6 +359,77 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		489FDCB32620109B00F5296D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftLoginAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = asia.vitalify.SwiftLoginAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftLoginApp;
+			};
+			name = Debug;
+		};
+		489FDCB42620109B00F5296D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftLoginAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = asia.vitalify.SwiftLoginAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SwiftLoginApp;
+			};
+			name = Release;
+		};
 		BD49DCCE1CC9C9340034F3CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -385,6 +544,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		489FDCB52620109B00F5296D /* Build configuration list for PBXNativeTarget "SwiftLoginAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				489FDCB32620109B00F5296D /* Debug */,
+				489FDCB42620109B00F5296D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BD49DCB91CC9C9340034F3CB /* Build configuration list for PBXProject "SwiftLoginApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gkD-pv-LVT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gkD-pv-LVT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,6 +41,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x3c-MC-W4n">
                                 <rect key="frame" x="102.5" y="298" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfUsername"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="52K-Mt-f9H"/>
                                     <constraint firstAttribute="width" constant="209" id="a8U-Zt-3AQ"/>
@@ -60,6 +61,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLM-Sf-91G">
                                 <rect key="frame" x="102.5" y="357" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfPassword"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="LnN-Tw-QR0"/>
                                     <constraint firstAttribute="height" constant="30" id="llw-dC-mMc"/>
@@ -69,6 +71,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ge8-lp-Cgg">
                                 <rect key="frame" x="137" y="411" width="140" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLogin"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="DoF-B0-Bte"/>
                                     <constraint firstAttribute="height" constant="60" id="RZb-dn-KVP"/>
@@ -78,8 +81,9 @@
                                     <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMf-6V-kvm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc7-aa-VYX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc7-aa-VYX">
                                 <rect key="frame" x="172" y="484" width="70" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnSignUp"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CH6-fm-sHd"/>
                                     <constraint firstAttribute="width" constant="70" id="xT7-8P-7UY"/>
@@ -174,6 +178,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FOG-vZ-9Gn">
                                 <rect key="frame" x="102.5" y="298" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfUsername"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="A5j-s3-vkV"/>
                                     <constraint firstAttribute="width" constant="209" id="agR-Lf-SHU"/>
@@ -193,6 +198,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-r1-6ZJ">
                                 <rect key="frame" x="102.5" y="357" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfPassword"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fc2-7T-bV7"/>
                                     <constraint firstAttribute="width" constant="209" id="hwA-4x-gYP"/>
@@ -202,6 +208,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHJ-pX-mad">
                                 <rect key="frame" x="137" y="480" width="140" height="60"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnSignUp"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="E0F-6Q-U3I"/>
                                     <constraint firstAttribute="width" constant="140" id="c5o-wm-leD"/>
@@ -233,6 +240,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ElS-P8-PMJ">
                                 <rect key="frame" x="102.5" y="416" width="209" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tfConfirm"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="209" id="XIO-2O-Eya"/>
                                     <constraint firstAttribute="height" constant="30" id="wIe-sT-Ny4"/>
@@ -294,8 +302,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igy-jg-ZPE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igy-jg-ZPE">
                                 <rect key="frame" x="265" y="55" width="71" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="btnLogout"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="bFx-w7-DDS"/>
                                     <constraint firstAttribute="height" constant="30" id="eCn-bN-HCa"/>
@@ -306,8 +315,8 @@
                                     <action selector="logoutBtn:" destination="9X5-rB-LjZ" eventType="touchUpInside" id="W7Y-eB-UhF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SwiftLoginApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcx-RW-vHS">
-                                <rect key="frame" x="143" y="117" width="315" height="134"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftLoginApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcx-RW-vHS">
+                                <rect key="frame" x="49.5" y="238" width="315" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="E7x-XH-3dp"/>
                                     <constraint firstAttribute="width" constant="315" id="aNQ-Fw-tIi"/>
@@ -349,11 +358,11 @@
             <point key="canvasLocation" x="266" y="218"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="i9F-He-gzI"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Login" width="284" height="107"/>
         <image name="SignUp" width="284" height="107"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="i9F-He-gzI"/>
-    </inferredMetricsTieBreakers>
 </document>
